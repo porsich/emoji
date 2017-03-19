@@ -1,8 +1,17 @@
 {
-  "presets": ["babel-preset-expo"],
+  "presets": ["babel-preset-expo", "react-native"],
   "env": {
     "development": {
       "plugins": ["transform-react-jsx-source"]
     }
-  }
+  },
+  "plugins": [
+    ["module-resolver", {
+      "root": ["./src"],
+      "alias": {
+        "app": "./src/app",
+        "assets": "./src/assets"
+      }
+    }]
+  ]
 }
